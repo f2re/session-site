@@ -15,11 +15,11 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">BG Remove</span>
+              <span className="text-xl font-bold text-white">SalePhotosession</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Профессиональное удаление фона с фотографий через Telegram бот.
-              Быстро, качественно, доступно.
+              AI-фотосессии товаров через Telegram бот.
+              Профессиональные фото для маркетплейсов и соцсетей.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            © {currentYear} BG Remove Bot. Все права защищены.
+            © {currentYear} SalePhotosession Bot. Все права защищены.
           </p>
 
           {/* Social Links */}

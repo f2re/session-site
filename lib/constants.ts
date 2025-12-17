@@ -29,8 +29,8 @@ export function getBotUrl(source: string, startParam?: string): string {
 export const FREE_PHOTOSHOOTS_COUNT = 2;
 
 // Referral program configuration
-export const REFERRAL_REWARD_START = 5;
-export const REFERRAL_REWARD_PURCHASE_PERCENT = 10;
+export const REFERRAL_REWARD_START = 2;
+export const REFERRAL_REWARD_PURCHASE_PERCENT = 5;
 
 // Metrika goals
 export const METRIKA_GOAL_START = "start_bot";
@@ -40,37 +40,37 @@ export const METRIKA_GOAL_PURCHASE = "purchase";
 export const PRICING_PACKAGES = [
   {
     id: 1,
-    name: "Пробный",
-    price: 149,
+    name: "Стартовый",
+    price: 290,
     photos: 3,
-    pricePerPhoto: "~50₽/шт",
+    pricePerPhoto: "~97₽/шт",
     isPopular: false,
-    features: ["3 фотосессии", "Все стили (Lifestyle, Studio, Interior, Creative)", "Быстрая генерация"],
+    features: ["3 фотосессии", "Все стили (Lifestyle, Studio, Interior, Creative)", "4 фото на фотосессию"],
   },
   {
     id: 2,
-    name: "Стартовый",
-    price: 299,
-    photos: 10,
-    pricePerPhoto: "~30₽/шт",
+    name: "Бизнес",
+    price: 990,
+    photos: 15,
+    pricePerPhoto: "~66₽/шт",
     isPopular: false,
-    features: ["10 фотосессий", "Сохранение понравившихся стилей", "Приоритетная обработка"],
+    features: ["15 фотосессий", "Сохранение до 6 стилей", "Приоритетная обработка"],
   },
   {
     id: 3,
-    name: "Профи",
-    price: 899,
+    name: "Профессиональный",
+    price: 2490,
     photos: 40,
-    pricePerPhoto: "~22₽/шт",
+    pricePerPhoto: "~62₽/шт",
     isPopular: true,
     features: ["40 фотосессий", "Максимальная выгода", "Персональная поддержка"],
   },
   {
     id: 4,
-    name: "Бизнес",
-    price: 1999,
+    name: "Студия",
+    price: 4990,
     photos: 100,
-    pricePerPhoto: "~20₽/шт",
+    pricePerPhoto: "~50₽/шт",
     isPopular: false,
     features: ["100 фотосессий", "Для маркетплейсов и каталогов", "VIP поддержка 24/7"],
   },
@@ -192,7 +192,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Сколько стоит одна фотосессия?",
-    answer: "Первые 2 фотосессии абсолютно бесплатно для новых пользователей. Далее стоимость начинается от 20₽ за фотосессию в зависимости от выбранного пакета. Чем больше пакет, тем выгоднее!",
+    answer: "Первые 2 фотосессии абсолютно бесплатно для новых пользователей. Далее стоимость начинается от 50₽ за фотосессию в зависимости от выбранного пакета. Каждая фотосессия включает 4 фото. Чем больше пакет, тем выгоднее!",
   },
   {
     question: "Как быстро генерируются фото?",
