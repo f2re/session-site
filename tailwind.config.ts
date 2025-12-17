@@ -11,14 +11,19 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0088CC",
-          dark: "#006699",
-          light: "#00A0E6",
+          DEFAULT: "#f5576c",
+          dark: "#d63f54",
+          light: "#f77e8f",
         },
         secondary: {
-          DEFAULT: "#8B5CF6",
-          dark: "#7C3AED",
-          light: "#A78BFA",
+          DEFAULT: "#00f2fe",
+          dark: "#00d4e6",
+          light: "#4facfe",
+        },
+        accent: {
+          DEFAULT: "#fee140",
+          dark: "#f5d428",
+          light: "#ffea70",
         },
         success: "#10B981",
         background: {
@@ -35,6 +40,9 @@ const config: Config = {
         "fade-in-up": "fadeInUp 0.6s ease-out",
         "scale-in": "scaleIn 0.4s ease-out",
         "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "slide-in-left": "slideInLeft 0.6s ease-out",
+        "slide-in-right": "slideInRight 0.6s ease-out",
+        "float": "float 3s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -48,6 +56,18 @@ const config: Config = {
         scaleIn: {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        slideInLeft: {
+          "0%": { opacity: "0", transform: "translateX(-30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        slideInRight: {
+          "0%": { opacity: "0", transform: "translateX(30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
       },
     },

@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingBag, Camera, FileText, Instagram } from "lucide-react";
+import { ShoppingBag, Store, Package, Instagram } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { USE_CASES } from "@/lib/constants";
 
 const iconMap = {
   ShoppingBag,
-  Camera,
-  FileText,
+  Store,
+  Package,
   Instagram,
 };
 
@@ -25,10 +25,10 @@ export default function UseCases() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            👥 Для кого подходит наш сервис?
+            Для кого наш бот
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Профессиональные решения для бизнеса и личных нужд
+            Профессиональные фотосессии для продавцов, маркетологов и владельцев бизнеса
           </p>
         </motion.div>
 

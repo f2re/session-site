@@ -4,12 +4,12 @@ export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "BG Remove",
-    description: "Профессиональное удаление фона с фотографий через Telegram бот",
+    name: "SalePhotosession Bot",
+    description: "AI-фотосессии товаров через Telegram бот. Профессиональные фото для маркетплейсов и соцсетей",
     url: "https://bg.app-studio.online",
     logo: "https://bg.app-studio.online/logo.png",
     sameAs: [
-      "https://t.me/BackgroundRemoving_bot",
+      "https://t.me/SalePhotosession_bot",
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -21,20 +21,21 @@ export default function StructuredData() {
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "BG Remove Telegram Bot",
+    name: "SalePhotosession Telegram Bot",
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Any (Telegram)",
+    description: "AI-бот для создания профессиональных фотосессий товаров в 4 стилях: Lifestyle, Studio, Interior, Creative",
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "RUB",
-      lowPrice: PRICING_PACKAGES[1].price,
+      lowPrice: PRICING_PACKAGES[0].price,
       highPrice: PRICING_PACKAGES[PRICING_PACKAGES.length - 1].price,
       offerCount: PRICING_PACKAGES.length,
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "500",
+      ratingValue: "4.8",
+      ratingCount: "350",
       bestRating: "5",
       worstRating: "1",
     },
@@ -56,8 +57,8 @@ export default function StructuredData() {
   const productSchemas = PRICING_PACKAGES.filter(pkg => pkg.price > 0).map((pkg) => ({
     "@context": "https://schema.org",
     "@type": "Product",
-    name: `${pkg.name} пакет`,
-    description: `Обработка ${pkg.photos} фотографий - ${pkg.features.join(", ")}`,
+    name: `Пакет фотосессий "${pkg.name}"`,
+    description: `${pkg.photos} профессиональных фотосессий товаров - ${pkg.features.join(", ")}`,
     offers: {
       "@type": "Offer",
       price: pkg.price,

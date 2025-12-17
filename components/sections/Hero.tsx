@@ -33,7 +33,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-8"
           >
             <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Работает на нейросетях</span>
+            <span className="text-sm font-medium">AI-фотосессии товаров</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -43,9 +43,9 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
-            Удали фон с любого фото
+            Превратите фото товара
             <br />
-            <span className="text-yellow-300">за 5 секунд</span>
+            в <span className="text-yellow-300">профессиональную съёмку</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -55,9 +55,9 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto"
           >
-            Нейросеть убирает фон с фотографий автоматически.
+            Нейросеть создаёт стильные фото для маркетплейсов и соцсетей.
             <br />
-            Для маркетплейсов, документов и соцсетей
+            Lifestyle, Studio, Interior, Creative — за 10 секунд
           </motion.p>
 
           {/* CTA Button */}
@@ -91,9 +91,9 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-6 text-left"
           >
             {[
-              "Первые 3 фото бесплатно",
-              "Прозрачный или белый фон",
-              "Без потери качества",
+              "Первые 2 фотосессии бесплатно",
+              "4 профессиональных стиля",
+              "Готово за 10-15 секунд",
             ].map((feature, index) => (
               <div key={index} className="flex items-center gap-2 text-white/90">
                 <Check className="w-5 h-5 text-green-300 flex-shrink-0" />
@@ -110,16 +110,16 @@ export default function Hero() {
             className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-2">15 000+</div>
-              <div className="text-sm md:text-base text-white/80">Обработано фото</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">5 000+</div>
+              <div className="text-sm md:text-base text-white/80">Фотосессий создано</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-2">5 сек</div>
-              <div className="text-sm md:text-base text-white/80">Средняя скорость</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">10-15 сек</div>
+              <div className="text-sm md:text-base text-white/80">Время обработки</div>
             </div>
             <div className="text-center col-span-2 md:col-span-1">
-              <div className="text-3xl md:text-4xl font-bold mb-2">4.9★</div>
-              <div className="text-sm md:text-base text-white/80">Рейтинг пользователей</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">4.8★</div>
+              <div className="text-sm md:text-base text-white/80">Рейтинг бота</div>
             </div>
           </motion.div>
         </motion.div>

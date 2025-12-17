@@ -1,4 +1,6 @@
 import Hero from "@/components/sections/Hero";
+import BeforeAfter from "@/components/sections/BeforeAfter";
+import PhotoshootStyles from "@/components/sections/PhotoshootStyles";
 import Features from "@/components/sections/Features";
 import HowItWorks from "@/components/sections/HowItWorks";
 import UseCases from "@/components/sections/UseCases";
@@ -12,6 +14,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <BeforeAfter />
+      <PhotoshootStyles />
       <Features />
       <HowItWorks />
       <UseCases />
