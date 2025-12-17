@@ -11,12 +11,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Удаление фона с фото онлайн через Telegram бот | BG Remove",
+  title: "AI Фотосессии товаров через Telegram бот | Профессиональные фото для маркетплейсов",
   description:
-    "Удалите фон с любой фотографии за 5 секунд через Telegram бот. Нейросеть создает прозрачный или белый фон. Первые 3 фото бесплатно. Для маркетплейсов, документов, соцсетей.",
+    "Превратите обычные фото товаров в профессиональные снимки за 10 секунд. 4 стиля: Lifestyle, Studio, Interior, Creative. Первые 2 фотосессии бесплатно. Для Wildberries, Ozon, соцсетей.",
   keywords:
-    "удаление фона, убрать фон с фото, прозрачный фон, telegram бот, обработка фото, нейросеть, белый фон, маркетплейсы, ozon, wildberries",
-  authors: [{ name: "BG Remove" }],
+    "фотосессия товаров, ai фото, telegram бот, фото для маркетплейсов, профессиональная съемка, wildberries, ozon, lifestyle фото, студийная съемка, фото для инстаграм",
+  authors: [{ name: "SalePhotosession Bot" }],
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -29,20 +29,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     url: "https://bg.app-studio.online",
-    title: "BG Remove - Удаление фона через Telegram",
-    description: "Первые 3 фото бесплатно! Нейросеть удаляет фон за 5 секунд",
-    siteName: "BG Remove",
+    title: "AI Фотосессии товаров - Профессиональные фото через Telegram",
+    description: "Первые 2 фотосессии бесплатно! Нейросеть создаёт профессиональные фото для маркетплейсов за 10 секунд",
+    siteName: "SalePhotosession Bot",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BG Remove - Удаление фона",
-    description: "Первые 3 фото бесплатно! Нейросеть удаляет фон за 5 секунд",
+    title: "AI Фотосессии товаров - SalePhotosession Bot",
+    description: "Первые 2 фотосессии бесплатно! 4 профессиональных стиля для ваших товаров",
   },
   robots: {
     index: true,
     follow: true,
   },
-  themeColor: "#6366f1",
+  themeColor: "#f5576c",
 };
 
 export default function RootLayout({

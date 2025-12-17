@@ -19,10 +19,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            💳 Прозрачные цены
+            Тарифы
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Выберите подходящий пакет. Без подписок и скрытых платежей
+            Выберите подходящий пакет фотосессий. Без подписок и скрытых платежей
           </p>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function Pricing() {
                       {pkg.price === 0 ? "Бесплатно" : `${pkg.price}₽`}
                     </div>
                     <div className="text-gray-600 dark:text-gray-400">
-                      {pkg.photos} {pkg.photos === 1 ? "фото" : "фото"}
+                      {pkg.photos} {pkg.photos === 1 ? "фотосессия" : "фотосессий"}
                     </div>
                     {pkg.price > 0 && (
                       <div className="text-sm text-gray-500">

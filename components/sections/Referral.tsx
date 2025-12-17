@@ -19,10 +19,10 @@ export default function Referral() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            🎁 Реферальная программа
+            Реферальная программа
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Приглашайте друзей и получайте бесплатные фото для обработки
+            Приглашайте друзей и получайте бесплатные фотосессии
           </p>
         </motion.div>
 
@@ -61,9 +61,9 @@ export default function Referral() {
                   <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Gift className="w-8 h-8 text-green-600 dark:text-green-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Получите {REFERRAL_REWARD_START} фото</h3>
+                  <h3 className="text-xl font-bold mb-2">Получите {REFERRAL_REWARD_START} фотосессий</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Когда друг запустит бота по вашей ссылке, вы сразу получите {REFERRAL_REWARD_START} бесплатных фото
+                    Когда друг запустит бота по вашей ссылке, вы сразу получите {REFERRAL_REWARD_START} бесплатных фотосессий
                   </p>
                 </div>
               </CardContent>
@@ -84,7 +84,7 @@ export default function Referral() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Зарабатывайте {REFERRAL_REWARD_PURCHASE_PERCENT}%</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Получайте {REFERRAL_REWARD_PURCHASE_PERCENT}% от каждой покупки вашего реферала в виде бесплатных фото
+                    Получайте {REFERRAL_REWARD_PURCHASE_PERCENT}% от каждой покупки вашего реферала в виде бесплатных фотосессий
                   </p>
                 </div>
               </CardContent>
@@ -106,12 +106,12 @@ export default function Referral() {
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Пример расчета</h3>
                   <p className="opacity-90">
-                    Ваш друг купил пакет «Профи» (50 фото)
+                    Ваш друг купил пакет «Профи» (40 фотосессий)
                   </p>
                 </div>
                 <div className="flex items-center justify-center md:justify-end">
                   <div className="text-center md:text-right">
-                    <div className="text-4xl font-bold mb-1">+5 фото</div>
+                    <div className="text-4xl font-bold mb-1">+4 фотосессии</div>
                     <div className="opacity-90">бесплатно для вас!</div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function Referral() {
               </li>
               <li className="flex items-start gap-3">
                 <Gift className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
-                <span>Бонусные фото начисляются автоматически и мгновенно</span>
+                <span>Бонусные фотосессии начисляются автоматически и мгновенно</span>
               </li>
               <li className="flex items-start gap-3">
                 <Users className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
@@ -167,7 +167,7 @@ export default function Referral() {
             Получить реферальную ссылку
           </Button>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
-            Начните зарабатывать бесплатные фото уже сегодня!
+            Начните зарабатывать бесплатные фотосессии уже сегодня!
           </p>
         </motion.div>
       </div>
