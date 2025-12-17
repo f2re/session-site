@@ -1,82 +1,156 @@
-# BG Remove - Landing Page
+# SalePhotosession Bot - Landing Page
 
-Modern landing page for a Telegram bot that removes backgrounds from photos using AI.
+Современный лендинг для Telegram бота **@SalePhotosession_bot**, который создаёт профессиональные AI-фотосессии товаров.
 
-## Features
+## О проекте
 
-- ⚡ Built with Next.js 14+ (App Router)
-- 🎨 Styled with Tailwind CSS
-- ✨ Smooth animations with Framer Motion
-- 📱 Fully responsive design
-- 🎯 SEO optimized
-- 🚀 Fast loading and performance
+Лендинг-страница для Telegram бота, который превращает обычные фото товаров в профессиональные снимки с помощью искусственного интеллекта.
 
-## Getting Started
+### Возможности бота
 
-1. Install dependencies:
+- 🎨 **4 профессиональных стиля**: Lifestyle, Studio, Interior, Creative
+- ⚡ **Мгновенная генерация**: Результат за 10-15 секунд
+- 💾 **Сохранение стилей**: До 6 понравившихся стилей
+- 🎁 **2 бесплатных фотосессии** для новых пользователей
+- 📸 **4 фото на фотосессию**
+
+## Особенности лендинга
+
+- ✨ Современный дизайн с градиентами
+- 🎨 Уникальная цветовая палитра для каждого стиля
+- 📱 Полностью адаптивный (mobile-first)
+- 🌊 Плавные анимации (Framer Motion)
+- 🔍 SEO оптимизация
+- 📊 Structured Data (Schema.org)
+
+## Быстрый старт
+
+### Установка
 
 ```bash
 npm install
 ```
 
-2. Configure environment variables:
+### Конфигурация
 
-Copy `.env.local` and update with your bot information:
-- `NEXT_PUBLIC_BOT_USERNAME` - Your Telegram bot username
-- `NEXT_PUBLIC_BOT_URL` - Full Telegram bot URL
+Скопируйте `.env.example` в `.env.local` и настройте переменные:
 
-3. Run the development server:
+```bash
+cp .env.example .env.local
+```
+
+Основные переменные:
+
+```env
+# Telegram Bot
+NEXT_PUBLIC_BOT_USERNAME=SalePhotosession_bot
+
+# Packages (цены в рублях)
+PACKAGE_1_PRICE=290
+PACKAGE_2_PRICE=990
+PACKAGE_3_PRICE=2490
+PACKAGE_4_PRICE=4990
+
+# Settings
+FREE_PHOTOSHOOTS_COUNT=2
+PHOTOS_PER_PHOTOSHOOT=4
+MAX_SAVED_STYLES=6
+```
+
+### Разработка
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Откройте [http://localhost:3000](http://localhost:3000)
 
-## Building for Production
+### Сборка
 
 ```bash
 npm run build
 npm start
 ```
 
-## Deployment
+## Структура проекта
 
-The easiest way to deploy is using [Vercel](https://vercel.com):
+```
+session-site/
+├── app/                # Next.js App Router
+├── components/
+│   ├── sections/      # Секции лендинга
+│   │   ├── Hero.tsx
+│   │   ├── BeforeAfter.tsx  # Примеры до/после
+│   │   ├── PhotoshootStyles.tsx  # 4 стиля
+│   │   ├── Features.tsx
+│   │   ├── Pricing.tsx
+│   │   └── ...
+│   └── ui/            # UI компоненты
+├── lib/
+│   └── constants.ts   # Константы и контент
+└── public/            # Статические файлы
+```
 
-1. Push your code to GitHub
-2. Import your repository to Vercel
-3. Configure environment variables
-4. Deploy!
+## Кастомизация
 
-## Customization
+### Цвета
 
-### Colors
-Edit colors in `tailwind.config.ts` to match your brand.
+Обновите в `tailwind.config.ts`:
 
-### Content
-Update content in `lib/constants.ts`:
-- Pricing packages
-- Features
-- FAQ items
-- Use cases
+```ts
+colors: {
+  primary: "#f5576c",    // Розовый
+  secondary: "#00f2fe",  // Голубой
+  accent: "#fee140",     // Желтый
+}
+```
 
-### Sections
-All sections are in `components/sections/`:
-- `Hero.tsx` - Main hero section
-- `Features.tsx` - Key features grid
-- `Pricing.tsx` - Pricing cards
-- `FAQ.tsx` - FAQ accordion
-- And more...
+### Контент
+
+Обновите в `lib/constants.ts`:
+- Тарифы (`PRICING_PACKAGES`)
+- Возможности (`FEATURES`)
+- Стили фотосессий (`PHOTOSHOOT_STYLES`)
+- FAQ (`FAQ_ITEMS`)
+
+### Изображения примеров
+
+См. [IMAGES-GUIDE.md](./IMAGES-GUIDE.md) для добавления реальных примеров фото из бота.
+
+## Деплой
+
+### Vercel (рекомендуется)
+
+1. Push в GitHub
+2. Импорт в Vercel
+3. Настройка переменных окружения
+4. Deploy
+
+### Docker
+
+```bash
+docker build -t salephotosession-site .
+docker run -p 3000:3000 salephotosession-site
+```
+
+## Документация
+
+- [IMAGES-GUIDE.md](./IMAGES-GUIDE.md) - Работа с изображениями
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Деплой на production
+- [SETUP-GUIDE.md](./SETUP-GUIDE.md) - Подробная настройка
 
 ## Tech Stack
 
-- **Framework**: Next.js 14+
+- **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **Language**: TypeScript
 
-## License
+## Интеграция с ботом
+
+Репозиторий бота: [https://github.com/f2re/sale-photosession-bot](https://github.com/f2re/sale-photosession-bot)
+
+## Лицензия
 
 MIT

@@ -106,12 +106,12 @@ export default function Referral() {
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Пример расчета</h3>
                   <p className="opacity-90">
-                    Ваш друг купил пакет «Профи» (40 фотосессий)
+                    Ваш друг купил пакет «Профессиональный» (40 фотосессий)
                   </p>
                 </div>
                 <div className="flex items-center justify-center md:justify-end">
                   <div className="text-center md:text-right">
-                    <div className="text-4xl font-bold mb-1">+4 фотосессии</div>
+                    <div className="text-4xl font-bold mb-1">+2 фотосессии</div>
                     <div className="opacity-90">бесплатно для вас!</div>
                   </div>
                 </div>
