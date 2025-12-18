@@ -58,6 +58,15 @@ html {
   background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
+.gradient-china {
+  background: linear-gradient(135deg, #e96a56 0%, #e9c758 100%);
+}
+
+.gradient-natural {
+  background: linear-gradient(135deg, #a1fda1 0%, #21b83d 100%);
+}
+
+
 .gradient-interior {
   background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
 }
