@@ -37,3 +37,4 @@ next-env.d.ts
 
 # plan file (optional - remove if you want to commit it)
 plan.md
+package-lock.json

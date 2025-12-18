@@ -7,15 +7,19 @@ const examples = [
   {
     id: 1,
     style: "Lifestyle",
-    before: "Простое фото товара",
-    after: "Профессиональная сцена использования",
+    before: "/examples/lifestyle/before.jpg",
+    after: "/examples/lifestyle/after.jpg",
+    beforeText: "Простое фото товара",
+    afterText: "Профессиональная сцена использования",
     gradient: "gradient-lifestyle",
   },
   {
     id: 2,
     style: "Studio",
-    before: "Фото на обычном фоне",
-    after: "Студийная съёмка с освещением",
+    before: "/examples/studio/before.jpg",
+    after: "/examples/studio/after.jpg",
+    beforeText: "Фото на обычном фоне",
+    afterText: "Студийная съёмка с освещением",
     gradient: "gradient-studio",
   },
   {
