@@ -1,14 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 const examples = [
   {
     id: 1,
     style: "Lifestyle",
-    before: "/examples/lifestyle/before.jpg",
-    after: "/examples/lifestyle/after.jpg",
+    beforeImage: "/examples/lifestyle/before.jpg",
+    afterImage: "/examples/lifestyle/after.jpg",
     beforeText: "Простое фото товара",
     afterText: "Профессиональная сцена использования",
     gradient: "gradient-lifestyle",
@@ -16,8 +18,8 @@ const examples = [
   {
     id: 2,
     style: "Studio",
-    before: "/examples/studio/before.jpg",
-    after: "/examples/studio/after.jpg",
+    beforeImage: "/examples/studio/before.jpg",
+    afterImage: "/examples/studio/after.jpg",
     beforeText: "Фото на обычном фоне",
     afterText: "Студийная съёмка с освещением",
     gradient: "gradient-studio",
@@ -25,18 +27,83 @@ const examples = [
   {
     id: 3,
     style: "Interior",
-    before: "Товар без контекста",
-    after: "Товар в стильном интерьере",
+    beforeImage: "/examples/interior/before.jpg",
+    afterImage: "/examples/interior/after.jpg",
+    beforeText: "Товар без контекста",
+    afterText: "Товар в стильном интерьере",
     gradient: "gradient-interior",
   },
   {
     id: 4,
     style: "Creative",
-    before: "Стандартный ракурс",
-    after: "Креативная композиция",
+    beforeImage: "/examples/creative/before.jpg",
+    afterImage: "/examples/creative/after.jpg",
+    beforeText: "Стандартный ракурс",
+    afterText: "Креативная композиция",
     gradient: "gradient-creative",
   },
 ];
+
+// Компонент для изображения с fallback
+function PhotoCard({
+  src,
+  alt,
+  label,
+  text,
+  isAfter = false
+}: {
+  src: string;
+  alt: string;
+  label: string;
+  text: string;
+  isAfter?: boolean;
+}) {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <div className={`${isAfter ? 'bg-white/90' : 'bg-white/50'} backdrop-blur-sm rounded-xl overflow-hidden ${isAfter ? 'shadow-lg' : ''}`}>
+      {/* Image Container */}
+      <div className="relative aspect-square bg-gray-100">
+        {!imageError ? (
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          // Fallback когда нет изображения
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+            <div className="text-center p-8">
+              <ImageIcon className="w-16 h-16 mx-auto text-gray-400 mb-3" />
+              <p className="text-sm text-gray-500 font-medium">{text}</p>
+            </div>
+          </div>
+        )}
+
+        {/* Label Badge */}
+        <div className="absolute top-3 left-3">
+          <div className={`px-3 py-1.5 rounded-full text-xs font-bold ${
+            isAfter
+              ? 'bg-gradient-to-r from-primary to-primary-dark text-white'
+              : 'bg-gray-800/80 backdrop-blur-sm text-white'
+          }`}>
+            {label}
+          </div>
+        </div>
+      </div>
+
+      {/* Description */}
+      <div className="p-4">
+        <p className={`text-sm ${isAfter ? 'text-gray-900 font-semibold' : 'text-gray-700'}`}>
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function BeforeAfter() {
   return (
@@ -69,58 +136,41 @@ export default function BeforeAfter() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                {/* Gradient Background */}
-                <div className={`${example.gradient} p-8 md:p-10`}>
-                  {/* Style Badge */}
-                  <div className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-sm font-semibold text-gray-800 mb-6">
+              <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-800">
+                {/* Style Badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <div className={`px-4 py-2 ${example.gradient} backdrop-blur-sm rounded-full text-sm font-bold text-white shadow-lg`}>
                     {example.style}
                   </div>
+                </div>
 
-                  {/* Before/After Comparison */}
-                  <div className="space-y-6">
-                    {/* Before */}
-                    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 font-semibold">
-                          До
-                        </div>
-                        <div className="flex-1">
-                          <div className="h-2 bg-gray-200 rounded w-3/4"></div>
-                          <div className="h-2 bg-gray-200 rounded w-1/2 mt-2"></div>
-                        </div>
-                      </div>
-                      <p className="text-sm text-gray-700">{example.before}</p>
-                    </div>
+                {/* Content */}
+                <div className="p-6">
+                  {/* Before/After Grid */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <PhotoCard
+                      src={example.beforeImage}
+                      alt={`До - ${example.style}`}
+                      label="ДО"
+                      text={example.beforeText}
+                      isAfter={false}
+                    />
 
-                    {/* Arrow */}
-                    <div className="flex justify-center">
-                      <div className="bg-white rounded-full p-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <ArrowRight className="w-6 h-6 text-gray-700" />
-                      </div>
-                    </div>
-
-                    {/* After */}
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center text-white font-semibold">
-                          AI
-                        </div>
-                        <div className="flex-1">
-                          <div className="h-2 bg-gradient-to-r from-primary/40 to-primary/20 rounded w-full"></div>
-                          <div className="h-2 bg-gradient-to-r from-primary/30 to-primary/10 rounded w-3/4 mt-2"></div>
-                          <div className="h-2 bg-gradient-to-r from-primary/20 to-primary/5 rounded w-1/2 mt-2"></div>
-                        </div>
-                      </div>
-                      <p className="text-sm text-gray-900 font-medium">{example.after}</p>
-                    </div>
+                    <PhotoCard
+                      src={example.afterImage}
+                      alt={`После - ${example.style}`}
+                      label="ПОСЛЕ"
+                      text={example.afterText}
+                      isAfter={true}
+                    />
                   </div>
 
-                  {/* Time Badge */}
-                  <div className="mt-6 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-700">
-                      ⚡ Готово за 10-15 секунд
-                    </div>
+                  {/* Info Banner */}
+                  <div className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+                    <ArrowRight className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                      AI-трансформация за 10-15 секунд
+                    </span>
                   </div>
                 </div>
               </div>
@@ -136,8 +186,11 @@ export default function BeforeAfter() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-            Готовы попробовать? Первые 2 фотосессии бесплатно!
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
+            Готовы попробовать?
+          </p>
+          <p className="text-xl font-bold text-primary">
+            Первые 2 фотосессии бесплатно!
           </p>
         </motion.div>
       </div>

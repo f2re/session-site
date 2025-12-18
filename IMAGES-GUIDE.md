@@ -53,15 +53,15 @@ public/
 
 ### 4. Обновление компонента BeforeAfter
 
-После добавления изображений обновите компонент `/home/user/session-site/components/sections/BeforeAfter.tsx`:
+Компонент `/home/user/session-site/components/sections/BeforeAfter.tsx` уже настроен для работы с изображениями:
 
 ```tsx
 const examples = [
   {
     id: 1,
     style: "Lifestyle",
-    before: "/examples/lifestyle/before.jpg",
-    after: "/examples/lifestyle/after.jpg",
+    beforeImage: "/examples/lifestyle/before.jpg",
+    afterImage: "/examples/lifestyle/after.jpg",
     beforeText: "Простое фото товара",
     afterText: "Профессиональная сцена использования",
     gradient: "gradient-lifestyle",
@@ -69,15 +69,42 @@ const examples = [
   {
     id: 2,
     style: "Studio",
-    before: "/examples/studio/before.jpg",
-    after: "/examples/studio/after.jpg",
+    beforeImage: "/examples/studio/before.jpg",
+    afterImage: "/examples/studio/after.jpg",
     beforeText: "Фото на обычном фоне",
     afterText: "Студийная съёмка с освещением",
     gradient: "gradient-studio",
   },
-  // ... остальные стили
+  {
+    id: 3,
+    style: "Interior",
+    beforeImage: "/examples/interior/before.jpg",
+    afterImage: "/examples/interior/after.jpg",
+    beforeText: "Товар без контекста",
+    afterText: "Товар в стильном интерьере",
+    gradient: "gradient-interior",
+  },
+  {
+    id: 4,
+    style: "Creative",
+    beforeImage: "/examples/creative/before.jpg",
+    afterImage: "/examples/creative/after.jpg",
+    beforeText: "Стандартный ракурс",
+    afterText: "Креативная композиция",
+    gradient: "gradient-creative",
+  },
 ];
 ```
+
+**Важно**: Используйте именно `beforeImage` и `afterImage` (не `before`/`after`), так как компонент использует эти ключи.
+
+**Автоматический fallback**: Компонент BeforeAfter автоматически определяет отсутствующие изображения и показывает красивый placeholder с иконкой и текстом. Вам не нужно ничего настраивать — просто добавьте реальные фото в папку `public/examples/`, когда они будут готовы.
+
+**Поддержка разных форматов**: Компонент использует Next.js Image с `aspect-square` и `object-cover`, что означает:
+- ✅ Вертикальные изображения будут обрезаны по центру и отображены как квадрат
+- ✅ Горизонтальные изображения будут обрезаны по центру и отображены как квадрат
+- ✅ Квадратные изображения отобразятся полностью
+- ✅ Все изображения автоматически оптимизируются Next.js
 
 ### 5. Альтернатива: использование placeholder изображений
 
