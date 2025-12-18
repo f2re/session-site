@@ -1,6 +1,8 @@
 import Hero from "@/components/sections/Hero";
 import BeforeAfter from "@/components/sections/BeforeAfter";
 import PhotoshootStyles from "@/components/sections/PhotoshootStyles";
+import BatchUpload from "@/components/sections/BatchUpload";
+import CustomStyles from "@/components/sections/CustomStyles";
 import Features from "@/components/sections/Features";
 import HowItWorks from "@/components/sections/HowItWorks";
 import UseCases from "@/components/sections/UseCases";
@@ -16,6 +18,8 @@ export default function Home() {
       <Hero />
       <BeforeAfter />
       <PhotoshootStyles />
+      <BatchUpload />
+      <CustomStyles />
       <Features />
       <HowItWorks />
       <UseCases />
