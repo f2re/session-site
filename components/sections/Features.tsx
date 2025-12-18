@@ -8,6 +8,8 @@ import {
   Save,
   Smartphone,
   Shield,
+  Images,
+  Brain,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { FEATURES } from "@/lib/constants";
@@ -19,6 +21,8 @@ const iconMap = {
   Save,
   Smartphone,
   Shield,
+  Images,
+  Brain,
 };
 
 export default function Features() {
