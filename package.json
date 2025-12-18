@@ -1,7 +1,7 @@
 {
-  "name": "bg-remove-site",
+  "name": "salephotosession-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI photosessions for products via Telegram bot",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",

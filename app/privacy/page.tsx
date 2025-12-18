@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Политика конфиденциальности | BG Remove",
-  description: "Политика конфиденциальности сервиса BG Remove - удаление фона с фотографий через Telegram бот",
+  title: "Политика конфиденциальности | SalePhotosession",
+  description: "Политика конфиденциальности сервиса SalePhotosession - AI фотосессии товаров через Telegram бот",
 };
 
 export default function PrivacyPage() {
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-semibold mb-4">1. Общие положения</h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 Настоящая Политика конфиденциальности определяет порядок обработки и защиты
-                персональных данных пользователей сервиса BG Remove (далее — «Сервис»).
+                персональных данных пользователей сервиса SalePhotosession (далее — «Сервис»).
               </p>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 Используя Сервис, вы соглашаетесь с условиями настоящей Политики конфиденциальности.
@@ -51,11 +51,12 @@ export default function PrivacyPage() {
                 Собранные данные используются исключительно для:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li>Предоставления услуг по обработке изображений</li>
+                <li>Предоставления услуг по созданию AI фотосессий товаров</li>
                 <li>Обработки платежей</li>
                 <li>Улучшения качества сервиса</li>
                 <li>Технической поддержки пользователей</li>
                 <li>Выполнения реферальной программы</li>
+                <li>Генерации и сохранения кастомных стилей</li>
               </ul>
             </section>
 
@@ -86,8 +87,8 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-semibold mb-4">6. Реферальная программа</h2>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 При участии в реферальной программе мы сохраняем информацию о рефералах
-                для начисления бонусов. За приглашение нового пользователя начисляется {" "}
-                {process.env.REFERRAL_REWARD_START || 5} бесплатных обработок.
+                для начисления бонусов. За приглашение нового пользователя начисляется 2 бесплатные
+                фотосессии, а также 5% от покупок приглашённых пользователей.
               </p>
             </section>
 

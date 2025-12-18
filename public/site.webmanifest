@@ -1,7 +1,7 @@
 {
-  "name": "BG Remove - Удаление фона",
-  "short_name": "BG Remove",
-  "description": "Удаление фона с фото через Telegram бот. Нейросеть удаляет фон за 5 секунд",
+  "name": "SalePhotosession - AI Фотосессии товаров",
+  "short_name": "SalePhotosession",
+  "description": "AI фотосессии товаров через Telegram бот. Профессиональные фото за 10-15 секунд. Пакетная загрузка и кастомные стили",
   "icons": [
     {
       "src": "/favicon.svg",
@@ -9,7 +9,7 @@
       "type": "image/svg+xml"
     }
   ],
-  "theme_color": "#6366f1",
+  "theme_color": "#f5576c",
   "background_color": "#0f172a",
   "display": "standalone",
   "scope": "/",
