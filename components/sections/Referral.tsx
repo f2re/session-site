@@ -162,7 +162,7 @@ export default function Referral() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-lg px-8 py-6"
-            onClick={() => window.open(getBotUrl("referral", "referral_start"), "_blank")}
+            onClick={() => window.open(getBotUrl("referral"), "_blank")}
           >
             Получить реферальную ссылку
           </Button>

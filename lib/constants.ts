@@ -2,27 +2,28 @@ export const BOT_USERNAME = "SalePhotosession_bot";
 export const BOT_URL = `https://t.me/${BOT_USERNAME}`;
 
 /**
- * Generates bot URL with UTM parameters for Yandex Metrika analytics
+ * Generates bot URL with UTM parameters embedded in Telegram start parameter
+ * Uses short UTM format: source_medium_campaign_content
+ *
  * @param source - Traffic source (e.g., "hero", "cta", "pricing", "footer")
- * @param startParam - Optional Telegram start parameter
- * @returns Full bot URL with UTM parameters
+ * @param packageId - Optional package ID for direct purchase links (e.g., "1", "2", "3")
+ * @returns Full bot URL with embedded UTM tracking
+ *
+ * Examples:
+ * - getBotUrl("hero") -> ?start=website_button_site_hero
+ * - getBotUrl("pricing", "1") -> ?start=package_1_website_button_site_pricing
  */
-export function getBotUrl(source: string, startParam?: string): string {
-  const utmParams = new URLSearchParams({
-    utm_source: "website",
-    utm_medium: "button",
-    utm_campaign: "photo_sessions",
-    utm_content: source,
-  });
+export function getBotUrl(source: string, packageId?: string): string {
+  // Short UTM format for Telegram deep links (Telegram only supports ?start=VALUE)
+  // Format: source_medium_campaign_content
+  const utmShort = `website_button_site_${source}`;
 
-  // Add Telegram start parameter if provided
-  let url = BOT_URL;
-  if (startParam) {
-    url += `?start=${startParam}`;
-    return `${url}&${utmParams.toString()}`;
-  }
+  // Combine package link with UTM tracking if package ID provided
+  const startParam = packageId
+    ? `package_${packageId}_${utmShort}`
+    : utmShort;
 
-  return `${url}?${utmParams.toString()}`;
+  return `${BOT_URL}?start=${startParam}`;
 }
 
 // Free photoshoots for new users
