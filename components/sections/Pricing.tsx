@@ -87,7 +87,7 @@ export default function Pricing() {
                     className="w-full"
                     variant={pkg.isPopular ? "default" : "outline"}
                     onClick={() =>
-                      window.open(getBotUrl(`pricing_${pkg.name}`, `pricing_${pkg.id}`), "_blank")
+                      window.open(getBotUrl("pricing", pkg.id.toString()), "_blank")
                     }
                   >
                     Выбрать пакет

@@ -78,7 +78,7 @@ export default function CTA() {
             <Button
               size="lg"
               className="bg-white text-primary hover:bg-gray-50 text-lg px-12 py-6 shadow-2xl animate-pulse-slow"
-              onClick={() => window.open(getBotUrl("cta", "cta"), "_blank")}
+              onClick={() => window.open(getBotUrl("cta"), "_blank")}
             >
               <svg
                 className="w-6 h-6 mr-2"
